@@ -39,7 +39,7 @@ def operation(request):
     taxamount = total * tax
     tipdistribute = tipamount/len(name) 
     taxdistribute = taxamount/len(name)
-    tiptaxi = [taxdistribute,tipdistribute]
+    tiptaxi = [tipdistribute,taxdistribute]
     tiptaxt = [tipamount,taxamount]
     afterdiscount = total-total*(discount/100)
     shamount = shprice/len(shperson)
@@ -50,8 +50,8 @@ def operation(request):
         'BasicSplitting': Task1,
         'UnevenSplittingGive': Task2a,
         'UnevenSplittingTake': Task2b,
-        'Tax and Tip individual': tiptaxi,
-        'Tax and Tip total': tiptaxt,
+        'Tip and Tax individual': tiptaxi,
+        'Tip and Tax total': tiptaxt,
         'AmountAfterDiscount': afterdiscount,
         'SharePrice': shstatement
     })
